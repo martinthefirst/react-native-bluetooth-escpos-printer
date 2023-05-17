@@ -1,10 +1,10 @@
-# react-native-bluetooch-escpos-printer
+# react-native-bluetooth-escpos-printer
 
 React-Native plugin for the bluetooth ESC/POS & TSC printers.
 
-Any questions or bug please raise a issue.
+Any questions or bug please raise an issue.
 
-##Still under developement
+##Still under development
 
 #May support Android /IOS
 
@@ -37,7 +37,7 @@ Ensure your build files match the following requirements:
 include ':react-native-bluetooth-escpos-printer'
 project(':react-native-bluetooth-escpos-printer').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-bluetooth-escpos-printer/android')
 ```
-2. (React Native 0.59 and lower) Add the *`react-native-bluetooth-escpos-printer`* as an dependency of your app in *`android/app/build.gradle`*:
+2. (React Native 0.59 and lower) Add the *`react-native-bluetooth-escpos-printer`* as a dependency of your app in *`android/app/build.gradle`*:
 ```
 ...
 dependencies {
@@ -63,7 +63,7 @@ BluetoothManager is the module for Bluetooth service management, supports Blueto
 
 * isBluetoothEnabled ==>
 async function, checks whether Bluetooth service is enabled.
-//TODO: consider to return the the devices information already bound and paired here..
+//TODO: consider to return the devices information already bound and paired here.
 
 ```javascript
      BluetoothManager.isBluetoothEnabled().then((enabled)=> {
@@ -104,7 +104,7 @@ BluetoothManager.disableBluetooth().then(()=>{
 ```
 
 * scanDevices ==>
-async function , scans the bluetooth devices, returns devices found and paired after scan finish. Event [BluetoothManager.EVENT_DEVICE_ALREADY_PAIRED] would be emitted with devices bound; event [BluetoothManager.EVENT_DEVICE_FOUND] would be emitted (many time) as long as new devices found.
+async function , scans the bluetooth devices, returns devices found and paired after scan finish. Event [BluetoothManager.EVENT_DEVICE_ALREADY_PAIRED] would be emitted with devices bound; event [BluetoothManager.EVENT_DEVICE_FOUND] would be emitted (many times) as long as new devices found.
 
 samples with events:
 ```javascript
@@ -140,7 +140,7 @@ BluetoothManager.scanDevices()
 ```
 
 * connect ==>
-async function, connects the specified device, if not bound, bound dailog prompts.
+async function, connects the specified device, if not bound, bound dialog prompts.
 
 ```javascript
 
@@ -404,7 +404,7 @@ let options = {
   set the underline of the text, @param line --  0-off,1-on,2-deeper
 
 #### printerAlign(int align) ####
-  set the printer alignment, constansts: BluetoothEscposPrinter.ALIGN.LEFT/BluetoothEscposPrinter.ALIGN.CENTER/BluetoothEscposPrinter.ALIGN.RIGHT.
+  set the printer alignment, constants: BluetoothEscposPrinter.ALIGN.LEFT/BluetoothEscposPrinter.ALIGN.CENTER/BluetoothEscposPrinter.ALIGN.RIGHT.
   Does not work on printPic() method.
 
 #### printText(String text, ReadableMap options) ####
@@ -419,7 +419,7 @@ let options = {
   print texts in column, Parameters as following:
   * columnWidths => int arrays, configs the width of each column, calculate by english character length. ex:the width of "abcdef" is 5 ,the width of "中文" is 4.
   * columnAligns => arrays, alignment of each column, values is the same of printerAlign().
-  * columnTexts => arrays, the texts of each colunm to print.
+  * columnTexts => arrays, the texts of each column to print.
   * options => text print config options, the same of printText() options.
 
 #### setWidth(int width) ####
@@ -429,7 +429,7 @@ let options = {
   prints the image which is encoded by base64, without schema.
   * options: contains the params that may use in printing pic: "width": the pic width, basic on devices width(dots,58mm-384); "left": the left padding of the pic for the printing position adjustment.
 
-#### setfTest() ####
+#### selfTest() ####
   prints the self test.
 
 #### rotate() ####

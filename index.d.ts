@@ -141,7 +141,7 @@ declare module '@cococart/react-native-bluetooth-escpos-printer' {
         const EVENT_BLUETOOTH_NOT_SUPPORT = "EVENT_BLUETOOTH_NOT_SUPPORT";
 
         interface Device {
-            name: string
+            name?: string
             address: string
         }
 
@@ -168,7 +168,7 @@ declare module '@cococart/react-native-bluetooth-escpos-printer' {
         function unpair(address: string): Promise<string>
 
         // TODO: change string to object
-        function scanDevices(): Promise<ScannedDevices>; // '{found:[],paired:[]}'
+        function scanDevices(): Promise<string>; // '{found:[],paired:[]}'
 
         function connect(address: string): Promise<void>;
 

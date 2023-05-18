@@ -142,8 +142,6 @@ BluetoothEscposPrinter.ALIGN = {
     RIGHT: 2
 };
 
-BluetoothManager.unpair = BluetoothManager.unpaire
-
 module.exports = {
     BluetoothManager, BluetoothEscposPrinter, BluetoothTscPrinter
 };

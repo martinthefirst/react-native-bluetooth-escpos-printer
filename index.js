@@ -1,6 +1,6 @@
+import {NativeModules} from 'react-native';
 
-import { NativeModules } from 'react-native';
- const {BluetoothManager,BluetoothEscposPrinter, BluetoothTscPrinter }= NativeModules;
+const {BluetoothManager, BluetoothEscposPrinter, BluetoothTscPrinter} = NativeModules;
 
 BluetoothTscPrinter.DIRECTION = {
     FORWARD: 0,
@@ -82,7 +82,7 @@ BluetoothTscPrinter.ROTATION = {
     ROTATION_180: 180,
     ROTATION_270: 270
 };
- BluetoothTscPrinter.FONTMUL = {
+BluetoothTscPrinter.FONTMUL = {
     MUL_1: 1,
     MUL_2: 2,
     MUL_3: 3,
@@ -100,47 +100,50 @@ BluetoothTscPrinter.BITMAP_MODE = {
     XOR: 2
 };
 BluetoothTscPrinter.PRINT_SPEED = {
-    SPEED1DIV5:1,
-    SPEED2:2,
-    SPEED3:3,
-    SPEED4:4
+    SPEED1DIV5: 1,
+    SPEED2: 2,
+    SPEED3: 3,
+    SPEED4: 4
 };
 BluetoothTscPrinter.TEAR = {
-	ON:'ON',
-	OFF:'OFF'
+    ON: 'ON',
+    OFF: 'OFF'
 };
-BluetoothTscPrinter.READABLE={
-  DISABLE:0,
-  EANBLE:1
+BluetoothTscPrinter.READABLE = {
+    DISABLE: 0,
+    EANBLE: 1
 };
 
 BluetoothEscposPrinter.ERROR_CORRECTION = {
-    L:1,
-    M:0,
-    Q:3,
-    H:2
+    L: 1,
+    M: 0,
+    Q: 3,
+    H: 2
 };
 
-BluetoothEscposPrinter.BARCODETYPE={
-    UPC_A:65,//11<=n<=12
-    UPC_E:66,//11<=n<=12
-    JAN13:67,//12<=n<=12
-    JAN8:68,//7<=n<=8
-    CODE39:69,//1<=n<=255
-    ITF:70,//1<=n<=255(even numbers)
-    CODABAR:71,//1<=n<=255
-    CODE93:72,//1<=n<=255
-    CODE128:73//2<=n<=255
+BluetoothEscposPrinter.BARCODETYPE = {
+    UPC_A: 65,//11<=n<=12
+    UPC_E: 66,//11<=n<=12
+    JAN13: 67,//12<=n<=12
+    JAN8: 68,//7<=n<=8
+    CODE39: 69,//1<=n<=255
+    ITF: 70,//1<=n<=255(even numbers)
+    CODABAR: 71,//1<=n<=255
+    CODE93: 72,//1<=n<=255
+    CODE128: 73//2<=n<=255
 };
-BluetoothEscposPrinter.ROTATION={
-    OFF:0,
-    ON:1
+BluetoothEscposPrinter.ROTATION = {
+    OFF: 0,
+    ON: 1
 };
-BluetoothEscposPrinter.ALIGN={
-    LEFT:0,
-    CENTER:1,
-    RIGHT:2
+BluetoothEscposPrinter.ALIGN = {
+    LEFT: 0,
+    CENTER: 1,
+    RIGHT: 2
 };
 
- module.exports ={
-    BluetoothManager,BluetoothEscposPrinter, BluetoothTscPrinter };
+BluetoothManager.unpair = BluetoothManager.unpaire
+
+module.exports = {
+    BluetoothManager, BluetoothEscposPrinter, BluetoothTscPrinter
+};
